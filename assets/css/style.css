@@ -582,3 +582,36 @@ a {
 .blog-item:hover .blog-item__more {
   color: #2e80ce;
 }
+
+/* appointment */
+.appointment {
+  padding: 85px 0;
+}
+
+.appointment__inner {
+  padding: 100px 178px;
+  background: #f6fbff;
+  text-align: center;
+}
+
+.appointment__heading {
+  max-width: 813px;
+}
+.appointment__heading::after {
+  display: block;
+  content: "";
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  margin: 18px auto 0;
+}
+
+.appointment__desc {
+  display: inline-block;
+  max-width: 617px;
+}
+
+.appointment__btn {
+  display: inline-block;
+  margin-top: 38px;
+}
