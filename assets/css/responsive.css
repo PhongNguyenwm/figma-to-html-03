@@ -1,0 +1,106 @@
+/* PC */
+@media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* Tablet & mobile */
+@media (max-width: 991.98px) {
+  /* 1. ẩn navbar */
+  .navbar {
+    display: none;
+  }
+
+  /* 2. di chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /* 3. hiện và chỉnh vị trí icon menu */
+  .menu-header__icon {
+    position: absolute;
+    top: 36px;
+    left: 26px;
+    color: #fff;
+    width: 25px;
+  }
+
+  /* 4. over lay */
+  .menu-overlay {
+    position: fixed;
+    background: rgb(0, 0, 0, 0.2);
+    inset: 0;
+    z-index: 5;
+    /* ở điều kiện bình thường ẩn lớp phủ */
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+  }
+
+  /* 5. kiểm tra checkbox được check thì hiện overlay */
+  .menu-checkbox:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 6. menu drawer */
+  .menu-drawer {
+    position: fixed;
+    background: #2e1919;
+    inset: 0 40% 0 0;
+    z-index: 6;
+    translate: -100% 0;
+    transition: 0.5s;
+    padding: 60px;
+  }
+  /* 7. kiểm tra menu được check */
+  .menu-checkbox:checked ~ .menu-drawer {
+    translate: 0 0;
+  }
+
+  /* 8. menu top */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 50px;
+  }
+
+  .navbar__link {
+    display: block;
+    margin-top: 5px;
+    font-size: 2rem;
+  }
+  .navbar__link:hover {
+    background: #00ffff37;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and(max-width:991.98px) {
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+}
+
+/* tạm ẩn phần không liên quan */
+.hero,
+.footer,
+main {
+  display: none;
+}
